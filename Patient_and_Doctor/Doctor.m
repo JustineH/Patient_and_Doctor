@@ -57,7 +57,7 @@
     if ([self.acceptedPatients containsObject:patient]) {
         for (NSString *symptom in patient.symptoms) {
             [patient.prescriptions addObject:[self.medication objectForKey:symptom]];
-            NSLog(@"\n%@ perscribed %@ to %@.", self.name, [self.medication objectForKey:symptom], patient.name);
+            NSLog(@"\n%@ perscribed %@ for %@ to %@.", self.name, [self.medication objectForKey:symptom], symptom, patient.name);
         }
     } else {
         NSLog(@"\n%@ cannot perscribe medication to %@.", self.name, patient.name);
